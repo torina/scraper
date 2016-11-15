@@ -1,12 +1,5 @@
 import scraper as scr
 
-# import urllib2
-
-# from urllib.parse import urljoin
-# from urllib.request import urlopen
-
-# from bs4 import BeautifulSoup
-
 WEBPAGEURL = "http://www.starz.com/movies/26915"
 DRIVERLOCATION = "/Users/Kokweazel/scraper/chromedriver"
 
@@ -17,7 +10,9 @@ if __name__ == '__main__':
 
         html = connection(WEBPAGEURL)
 
-        print html
+        soup = scr.Soup(html)
+
+        soup.printout()
 
 
 
