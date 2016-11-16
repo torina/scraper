@@ -6,7 +6,7 @@ DRIVERLOCATION = "/Users/Kokweazel/scraper/chromedriver"
 # print con.__dict__
 
 if __name__ == '__main__':
-    with scr.SeleniumConnection(DRIVERLOCATION) as connection:
+    with scr.SeleniumConnection(DRIVERLOCATION, True) as connection:
 
         html = connection(WEBPAGEURL)
 

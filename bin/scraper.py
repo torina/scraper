@@ -10,10 +10,10 @@ class SeleniumConnection:
         if set_env:
             os.environ[self.browser] = driverlocation
 
-        self.driverlocation = driverlocation
+        self.driver = webdriver.Chrome(driverlocation)
 
     def __enter__(self):
-        return webdriver.Chrome(self.driverlocation)
+        return self
 
     def __call__(self, url):
         self.driver.get(url)
