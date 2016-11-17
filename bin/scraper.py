@@ -27,7 +27,7 @@ class Browser:
             print "\nCan't get rid of that shtty ErrorMsg:"
             self.driver.quit()
 
-## Soup Class is a Wrapper around BeautifulSoup. Basically parses the sourcecode
+## Soup Class is a Wrapper around BeautifulSoup. Basically parses the provied Html
 class Soup:
     parser = "html.parser"
 
@@ -64,17 +64,17 @@ class UrlProvider:
 
 ## MovieFabric produces the Class Movie according to config
 class MovieFabric:
-    def __init__(self, titleconfig, ratingconfig):
-        self.titleconfig = titleconfig
-        self.ratingconfig = ratingconfig
+    def __init__(self, *extractionConfigs):
+        self.exconfigs = extractionConfigs
 
     def __call__(self, html):
         soup = Soup(html)
 
-        name = soup.findByConfig(self.titleconfig)
-        rating = soup.findByConfig(self.ratingconfig)
+        movieargs = []
+        for config in self.exconfigs:
+            movieargs.append(soup.findByConfig(config))
 
-        return Movie(name, rating)
+        return Movie(*movieargs)
 
 ## Class Movie is the result class. use str(movie) for nice string representation
 class Movie:
