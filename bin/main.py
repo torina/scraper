@@ -1,19 +1,28 @@
 from scraper import Scraper
 
-WEBPAGEURL = "http://www.starz.com/movies"
-KILLSWITCH = 10
+class StarzMovieConfiguration:
+    # The Base Url which is loaded
+    BaseUrl = "http://www.starz.com/movies"
+    # Arguments for beautfulsoup.find_all() to extract Movie List from Soup
+    MovieConfig = {"name": "a", "class_": "slick-link"}
+    # Key to Extract Movie URL from MovieList
+    UrlKey = 'href'
+    # Arguments for beautfulsoup.find_all() to extract Movie Title from Soup
+    TitleConfig = {"name": "h1"}
+    # Arguments for beautfulsoup.find_all() to extract Movie Rating from Soup
+    RatingConfig = {"name": "li", "attrs": {"ng-if": "vm.details.mpaaRating"} }
+    # That Many Movies will be loaded
+    KillSwitch = 2
 
 if __name__ == '__main__':
-
-    with Scraper(WEBPAGEURL) as scraper:
-
-        for movie in scraper.browsePage(KILLSWITCH):
-
+    ## Initialize the Scraper
+    with Scraper(StarzMovieConfiguration) as scraper:
+        # Loop through Movie List
+        for movie in scraper.Next():
+            # Do Something with Movie
             print str(movie)
 
-
-
-
+    print 'Exited Sucessfull'
 
 
 ## REFERENCE CODE ##

@@ -313,3 +313,134 @@ JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: E
 JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
 [Child 3610] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
 [Child 3610] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479420367846	geckodriver	INFO	Listening on 127.0.0.1:56102
+1479420368807	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.JRDrHDrliZkH
+1479420368808	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479420368810	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56108
+1479420369258	Marionette	INFO	Listening on port 56108
+[Child 3665] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3665] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479420428702	geckodriver	INFO	Listening on 127.0.0.1:56240
+1479420429666	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.iLjILXst0QEi
+1479420429667	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479420429670	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56246
+1479420430129	Marionette	INFO	Listening on port 56246
+[Child 3679] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3679] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479420477275	geckodriver	INFO	Listening on 127.0.0.1:56351
+1479420478235	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.Vv1Z9dcoaQPy
+1479420478236	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479420478238	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56357
+1479420478684	Marionette	INFO	Listening on port 56357
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 3688] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3688] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479420608577	geckodriver	INFO	Listening on 127.0.0.1:56519
+1479420609542	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.mEOF0NFKODnn
+1479420609543	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479420609546	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56525
+1479420609990	Marionette	INFO	Listening on port 56525
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 3734] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3734] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479420660190	geckodriver	INFO	Listening on 127.0.0.1:56661
+1479420661152	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.bqrBVEpJcjXn
+1479420661153	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479420661155	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56667
+1479420661607	Marionette	INFO	Listening on port 56667
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 3744] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3744] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479421602460	geckodriver	INFO	Listening on 127.0.0.1:56870
+1479421603422	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.L3Dus0tSLRzc
+1479421603423	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479421603426	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56876
+1479421603869	Marionette	INFO	Listening on port 56876
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 3938] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3938] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479421643227	geckodriver	INFO	Listening on 127.0.0.1:57025
+1479421644188	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.oA9AY65Mr007
+1479421644189	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479421644192	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57031
+1479421644637	Marionette	INFO	Listening on port 57031
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 3953] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3953] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479421964883	geckodriver	INFO	Listening on 127.0.0.1:57230
+1479421965843	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.TppqzljY9XqC
+1479421965844	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479421965846	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57236
+1479421966285	Marionette	INFO	Listening on port 57236
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 3999] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 3999] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479422570037	geckodriver	INFO	Listening on 127.0.0.1:57399
+1479422570998	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.QTkeMBTSFXHb
+1479422570999	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479422571001	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57405
+1479422571457	Marionette	INFO	Listening on port 57405
+[Child 4125] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4125] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479422627479	geckodriver	INFO	Listening on 127.0.0.1:57533
+1479422628442	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.H0oMyH1YHHiP
+1479422628443	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479422628445	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57539
+1479422628893	Marionette	INFO	Listening on port 57539
+[Child 4149] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4149] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479422709458	geckodriver	INFO	Listening on 127.0.0.1:57659
+1479422710419	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.fOKmGYuuAscz
+1479422710420	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479422710422	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57666
+1479422710891	Marionette	INFO	Listening on port 57666
+[Child 4171] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4171] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479422814761	geckodriver	INFO	Listening on 127.0.0.1:57799
+1479422815724	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.42F4Tue3Z2P3
+1479422815726	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479422815728	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57805
+1479422816185	Marionette	INFO	Listening on port 57805
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 4182] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4182] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479423166064	geckodriver	INFO	Listening on 127.0.0.1:57955
+1479423167027	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.wmgkD5tju5ga
+1479423167028	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479423167031	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57961
+1479423167486	Marionette	INFO	Listening on port 57961
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 4246] WARNING: pipe error: Broken pipe: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 684
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 4246] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4246] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479424255292	geckodriver	INFO	Listening on 127.0.0.1:58132
+1479424256251	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.1SrV2RWK3p1d
+1479424256252	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479424256255	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58138
+1479424256707	Marionette	INFO	Listening on port 58138
+[Child 4524] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4524] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479424303693	geckodriver	INFO	Listening on 127.0.0.1:58264
+1479424304654	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.h9RWuIskHCoF
+1479424304655	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479424304658	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58270
+1479424305101	Marionette	INFO	Listening on port 58270
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 4534] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4534] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479425029903	geckodriver	INFO	Listening on 127.0.0.1:58420
+1479425030866	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.XqKlJAfTFQAD
+1479425030867	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479425030870	geckodriver::marionette	INFO	Connecting to Marionette on localhost:58426
+1479425031314	Marionette	INFO	Listening on port 58426
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+[Child 4728] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+[Child 4728] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056

@@ -5,47 +5,40 @@ from bs4 import BeautifulSoup
 # Same as urllib.parse
 from urlparse import urljoin
 
-HEADERCONFIG = {"name": "div", "class_": "title"}
-TITLECONFIG = {"name": "h1"}
-RATINGCONFIG = {"name": "li", "attrs": {"ng-if": "vm.details.mpaaRating"} }
-
+## The Browser Class handles browsing the Web. __call__ returns the sourcecode
 class Browser:
     def __init__(self, baseurl):
         self.baseurl = baseurl
         self.driver = webdriver.Firefox()
 
     def __call__(self, path=""):
-
+        # Add the Optional Path to the BaseUrl
         url = urljoin(self.baseurl, path)
-
+        # Load the site
         self.driver.get(url)
-
+        # Return the SourceCode
         return self.driver.page_source
 
     def teardown(self):
+        # Clean Up
         self.driver.close()
 
         if self.driver:
             print "\nCan't get rid of that shtty ErrorMsg:"
             self.driver.quit()
 
+## Soup Class is a Wrapper around BeautifulSoup. Basically parses the sourcecode
 class Soup:
     parser = "html.parser"
+
     def __init__(self, html):
         self._soup = BeautifulSoup(html, self.parser)
 
-    def loopMovieUrl(self):
-        for mvslice in self._soup.find_all("a", class_="slick-link"):
-            yield self.getMovieUrl(mvslice)
-
-    def getMovieUrl(self, mvslice):
-        return mvslice['href']
-
-    def findOneByConfig(self, config, soup=None):
-        if not soup:
-            soup = self._soup
-
+    def findByConfig(self, config, expectone=True):
         result = self._soup.find_all(**config)
+
+        if not expectone:
+            return result
 
         if len(result) != 1:
             print result
@@ -53,21 +46,41 @@ class Soup:
 
         return result[0]
 
-    def findTitle(self):
-        header = self.findOneByConfig(HEADERCONFIG)
-
-        return self.findOneByConfig(TITLECONFIG, soup=header)
-
-    def findRating(self):
-        return self.findOneByConfig(RATINGCONFIG)
-
     def printout(self):
         print self._soup.prettify()
 
+## UrlProvider extracts the urls from a sourcehtml according to Configuration
+class UrlProvider:
+    def __init__(self, sourcehtml, config, urlkey):
+        soup = Soup(sourcehtml)
+
+        self.urlkey = urlkey
+        self.urls = soup.findByConfig(config, expectone=False)
+
+    def Next(self):
+        for i, url in enumerate(self.urls):
+
+            yield i, url[self.urlkey]
+
+## MovieFabric produces the Class Movie according to config
+class MovieFabric:
+    def __init__(self, titleconfig, ratingconfig):
+        self.titleconfig = titleconfig
+        self.ratingconfig = ratingconfig
+
+    def __call__(self, html):
+        soup = Soup(html)
+
+        name = soup.findByConfig(self.titleconfig)
+        rating = soup.findByConfig(self.ratingconfig)
+
+        return Movie(name, rating)
+
+## Class Movie is the result class. use str(movie) for nice string representation
 class Movie:
-    def __init__(self, moviesoup):
-        self.name = moviesoup.findTitle()
-        self.rating = moviesoup.findRating()
+    def __init__(self, name, rating):
+        self.name = name
+        self.rating = rating
 
     def __str__(self):
         if not self.name or not self.rating:
@@ -75,11 +88,16 @@ class Movie:
 
         return "Name: " + self.name.text + " -- Rating: " + self.rating.text
 
+## Scraper Class scraps Website according to config
 class Scraper:
-    def __init__(self, sourceurl):
-        self.browser = Browser(sourceurl)
+    def __init__(self, config):
+        self.browser = Browser(config.BaseUrl)
 
-        self.mainpage = Soup(self.browser())
+        self.urlprovider = UrlProvider(self.browser(), config.MovieConfig, config.UrlKey)
+
+        self.fabric = MovieFabric(config.TitleConfig, config.RatingConfig)
+
+        self.killswitch = config.KillSwitch
 
     def __enter__(self):
         return self
@@ -87,16 +105,15 @@ class Scraper:
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.browser.teardown()
 
-    def browsePage(self, killswitch=None):
-        for i, movieurl in enumerate(self.mainpage.loopMovieUrl()):
+    def Next(self):
 
-            if killswitch and i >= killswitch:
+        for i, url in self.urlprovider.Next():
+
+            if self.killswitch and i >= self.killswitch:
                 return
 
-            html = self.browser(movieurl)
+            html = self.browser(url)
 
-            moviepage = Soup(html)
+            model = self.fabric(html)
 
-            movie = Movie(moviepage)
-
-            yield movie
+            yield model
