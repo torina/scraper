@@ -1,18 +1,16 @@
-import scraper as scr
+from scraper import Scraper
 
-WEBPAGEURL = "http://www.starz.com/movies/26915"
-DRIVERLOCATION = "/Users/Kokweazel/scraper/chromedriver"
-
-# print con.__dict__
+WEBPAGEURL = "http://www.starz.com/movies"
+KILLSWITCH = 10
 
 if __name__ == '__main__':
-    with scr.SeleniumConnection(DRIVERLOCATION) as connection:
 
-        html = connection(WEBPAGEURL)
+    with Scraper(WEBPAGEURL) as scraper:
 
-        soup = scr.Soup(html)
+        for movie in scraper.browsePage(KILLSWITCH):
 
-        soup.printout()
+            print str(movie)
+
 
 
 
@@ -20,49 +18,38 @@ if __name__ == '__main__':
 
 ## REFERENCE CODE ##
 
-# driver = webdriver.Chrome()
+
+# from urllib.parse import urljoin
+# from urllib.request import urlopen
+# from bs4 import BeautifulSoup
+# from selenium import webdriver
+# import os, csv
+
+# chromedriver = "C:/Program Files/chrome/chromedriver.exe"
+# os.environ["webdriver.chrome.driver"] = chromedriver
+# driver = webdriver.Chrome(chromedriver)
+# #todo remove
+
+# wiki = "http://www.starz.com/movies"
 # driver.get(wiki)
-
-# req = urllib2.Request(wiki)
-# response = urllib2.urlopen(req)
-# html = response.read()
-
-# print 'Set 30 years after Return' in str(html)
-
-# soup = BeautifulSoup(str(html), "html.parser")
-# soup = soup.prettify()
-# print 'Set 30 years after Return' in soup
+# html = driver.page_source
+# soup = BeautifulSoup(html, "html.parser")
 # lobbying = {}
-
-# print soup.find_all("a", class_="slick-link")
 
 # for mvSlice in soup.find_all("a", class_="slick-link"):
 #     href = (mvSlice['href'])
-#     print wiki, href
-    # movieUrl = urljoin(wiki, href)
+#     movieUrl = urljoin(wiki, href)
+#     #print(movieUrl)
 #     driver.get(movieUrl)
 #     html = driver.page_source
 #     soup = BeautifulSoup(html, "html.parser")
 #     pretty = soup.prettify()
 
-# title = soup.find_all(True)
-# for tag in title:
-#     if tag.has_attr('data-ng-controller'):
-#         break
+#     title = soup.find_all("div", class_="title")[0]
+#     #print(title.find_all("h1")[0].text)
+#     lobbying[title.find_all("h1")[0].text] = {} #create new dict
 
-# section = tag.find_all("section")[0]
-
-# subsection = section.find_all("div")[0]
-
-# print soup.prettify()
-
-# #     #print(title.find_all("h1")[0].text)
-# #     lobbying[title.find_all("h1")[0].text] = {} #create new dict
-
-# # print soup.find_all("section", class_="block-details")
-
-# rating = soup.find_all("li", {"ng-if": "vm.details.mpaaRating"})
-# print rating
+#     rating = soup.find_all("li", {"ng-if": "vm.details.mpaaRating"})
 #     #print(rating[0].text)
 #     # error here
 #     if(rating[0] != None):
@@ -70,3 +57,5 @@ if __name__ == '__main__':
 
 # for item in lobbying.keys():
 #     print(item + ": " + "\n\t" + "rate: " + lobbying[item]["rate"] + "\n\n")
+
+# driver.quit()
