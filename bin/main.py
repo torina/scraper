@@ -16,7 +16,7 @@ yearXpath = pathTemplate.format(5)
 castCrew = '//div[@class="block-description"]'
 
 # end config
-browser = WebNavigator.Browser(baseURL)
+browser = WebNavigator.FirefoxBrowser(baseURL)
 html = browser()
 
 soup = BeautifulSoup(html, "html.parser")

@@ -454,3 +454,18 @@ JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: E
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 [Child 5056] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
 [Child 5056] ###!!! ABORT: Aborting on channel error.: file /builds/slave/m-rel-m64-00000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2056
+1479511585591	geckodriver	INFO	Listening on 127.0.0.1:59316
+1479511586536	mozprofile::profile	INFO	Using profile path /var/folders/t6/881b1b4j5c9_xpkyq5dxm_b80000gn/T/rust_mozprofile.sRSke6fHkNvR
+1479511586537	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin
+1479511586539	geckodriver::marionette	INFO	Connecting to Marionette on localhost:59322
+1479511587104	Marionette	INFO	Listening on port 59322
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: https://www.starz.com/scripts/app-be2c0cb318.min.js, line 1: Error: User not authenticated
+JavaScript error: chrome://marionette/content/listener.js, line 870: TypeError: can't access dead object
