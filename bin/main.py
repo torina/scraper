@@ -1,70 +1,37 @@
-from scraper import Scraper
+from bs4 import BeautifulSoup
+import WebNavigator
+import MovieFabric
+# configs
+# http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement
+baseURL = "http://www.starz.com/movies"
 
-class StarzMovieConfiguration:
-    # The Base Url which is loaded
-    BaseUrl = "http://www.starz.com/movies"
-    # Arguments for beautfulsoup.find_all() to extract Movie List from Soup
-    MovieConfig = {"name": "a", "class_": "slick-link"}
-    # Key to Extract Movie URL from MovieList
-    UrlKey = 'href'
-    # Arguments for beautfulsoup.find_all() to extract Movie Title from Soup
-    TitleConfig = {"name": "h1"}
-    # Arguments for beautfulsoup.find_all() to extract Movie Rating from Soup
-    RatingConfig = {"name": "li", "attrs": {"ng-if": "vm.details.mpaaRating"} }
-    # That Many Movies will be loaded
-    KillSwitch = 2
+#setting XPathes for every elem.
+titleXpath = '//div[@class="title"]/h1'
 
-if __name__ == '__main__':
-    ## Initialize the Scraper
-    with Scraper(StarzMovieConfiguration) as scraper:
-        # Loop through Movie List
-        for movie in scraper.Next():
-            # Do Something with Movie
-            print str(movie)
+pathTemplate = '//ul[@class="meta-list"]/li[{0}]'
+ratingxPath = pathTemplate.format(2)
+timeXpath = pathTemplate.format(3)
+genreXpath = pathTemplate.format(4)
+yearXpath = pathTemplate.format(5)
+castCrew = '//div[@class="block-description"]'
 
-    print 'Exited Sucessfull'
+# end config
+browser = WebNavigator.Browser(baseURL)
+html = browser()
+
+soup = BeautifulSoup(html, "html.parser")
+results = {}
+
+factory = MovieFabric.MovieFabric(browser)
+# for [presumably] all hrefs
+for mvSlice in soup.find_all("a", class_="slick-link"):
+    href = (mvSlice['href'])
+    # todo how to move through pages
+    movieHtml = browser(href)
+    soup = BeautifulSoup(movieHtml, "html.parser")
+    pretty = soup.prettify()
 
 
-## REFERENCE CODE ##
-
-
-# from urllib.parse import urljoin
-# from urllib.request import urlopen
-# from bs4 import BeautifulSoup
-# from selenium import webdriver
-# import os, csv
-
-# chromedriver = "C:/Program Files/chrome/chromedriver.exe"
-# os.environ["webdriver.chrome.driver"] = chromedriver
-# driver = webdriver.Chrome(chromedriver)
-# #todo remove
-
-# wiki = "http://www.starz.com/movies"
-# driver.get(wiki)
-# html = driver.page_source
-# soup = BeautifulSoup(html, "html.parser")
-# lobbying = {}
-
-# for mvSlice in soup.find_all("a", class_="slick-link"):
-#     href = (mvSlice['href'])
-#     movieUrl = urljoin(wiki, href)
-#     #print(movieUrl)
-#     driver.get(movieUrl)
-#     html = driver.page_source
-#     soup = BeautifulSoup(html, "html.parser")
-#     pretty = soup.prettify()
-
-#     title = soup.find_all("div", class_="title")[0]
-#     #print(title.find_all("h1")[0].text)
-#     lobbying[title.find_all("h1")[0].text] = {} #create new dict
-
-#     rating = soup.find_all("li", {"ng-if": "vm.details.mpaaRating"})
-#     #print(rating[0].text)
-#     # error here
-#     if(rating[0] != None):
-#         lobbying[title.find_all("h1")[0].text]["rate"] = rating[0].text
-
-# for item in lobbying.keys():
-#     print(item + ": " + "\n\t" + "rate: " + lobbying[item]["rate"] + "\n\n")
-
-# driver.quit()
+    movie = factory.produceMovie(titleXpath, ratingxPath, timeXpath, genreXpath, yearXpath, castCrew)
+    print(str(movie))
+browser.tearown()
