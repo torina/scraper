@@ -1,11 +1,15 @@
-from urllib.parse import urljoin
 from selenium import webdriver
+
+try:
+    from urllib.parse import urljoin
+except ImportError:
+    from urlparse import urljoin
 
 ## The Browser Class handles browsing the Web. __call__ returns the sourcecode
 class Browser:
     def __init__(self, baseurl):
         self.baseurl = baseurl
-        self.driver = webdriver.Chrome()
+        self.driver = self.getDriver()
 
     def __call__(self, path=""):
         # Add the Optional Path to the BaseUrl
@@ -25,3 +29,11 @@ class Browser:
 
     def getByXpath(self, xPath):
         return self.driver.find_element_by_xpath(xPath)
+
+    def getDriver(self):
+        return webdriver.Chrome()
+
+
+class FirefoxBrowser(Browser):
+    def getDriver(self):
+        return webdriver.Firefox()
