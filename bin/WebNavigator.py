@@ -33,7 +33,15 @@ class Browser:
     def getDriver(self):
         return webdriver.Chrome()
 
+     def traverseTable(self, tableXpath, *classAttributes):
+        tableBody = self.getByXpath(tableXpath)
+        for row in tableBody.find_elements_by_xpath('.//tr'):
+            dictator = {}
+            for a in classAttributes:
+                dictator.update({a: row.find_element_by_class_name(a)})
+            yield (dictator)
 
 class FirefoxBrowser(Browser):
     def getDriver(self):
         return webdriver.Firefox()
+    
