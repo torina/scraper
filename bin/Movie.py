@@ -6,6 +6,7 @@ class Movie:
                  time,
                  genre,
                  year,
+                 time,
                  synopsis
     #            castAndCrew
     ):
